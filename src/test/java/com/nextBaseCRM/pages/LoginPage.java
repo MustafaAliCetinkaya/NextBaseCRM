@@ -32,4 +32,8 @@ public class LoginPage {
     @FindBy(css = "span.user-name")
     public WebElement usernameOnTheDropdown;
 
+
+    @FindBy(css = "div.errortext")
+    public WebElement warningMessage;
+
 }

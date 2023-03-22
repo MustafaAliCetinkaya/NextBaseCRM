@@ -1,6 +1,7 @@
 package com.nextBaseCRM.pages;
 
 import com.nextBaseCRM.utilities.BrowserUtils;
+import com.nextBaseCRM.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

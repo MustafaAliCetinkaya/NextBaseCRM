@@ -1,6 +1,6 @@
 Feature: Login functionality ( As a user, I should be able to log in to the system with valid credentials and land on the "Activity Stream" page after successful login. )
 
-  @LoginWithValidCredentials
+  @AGL-347
   Scenario Outline: All users can log in with valid credentials (We have 3 types of users such as Helpdesk, Human Resource, and Marketing). All users should land on the "Activity Stream" page after successful login.
     Given User opens the Application URL in any supported browser in order to login the system
     When User writes the  "<username>" into the username box in the authorization window.

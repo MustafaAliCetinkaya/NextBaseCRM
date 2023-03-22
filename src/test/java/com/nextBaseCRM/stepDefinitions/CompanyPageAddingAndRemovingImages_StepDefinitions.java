@@ -1,39 +1,15 @@
 package com.nextBaseCRM.stepDefinitions;
 
-import com.nextBaseCRM.pages.AgileProCRMBasePage;
+import com.nextBaseCRM.pages.CompanyPage;
+import com.nextBaseCRM.pages.LoginPage;
 import com.nextBaseCRM.utilities.BrowserUtils;
-import com.nextBaseCRM.utilities.ConfigurationReader;
 import com.nextBaseCRM.utilities.Driver;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class TCAddingAndRemovingImages {
-
-    AgileProCRMBasePage pageObject = new AgileProCRMBasePage();
-
-    @Given("Open the Application URL in any supported browser in order to login the system")
-    public void open_the_application_url_in_any_supported_browser_in_order_to_login_the_system() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("AgileProCRM"));
-    }
-
-    @When("User writes the  {string} into the username box in the authorization window.")
-    public void userWritesTheIntoTheUsernameBoxInTheAuthorizationWindow(String username) {
-        pageObject.usernameBox.clear();
-        pageObject.usernameBox.sendKeys(username);
-    }
-
-    @When("User writes the  {string} into the password box in the authorization window.")
-    public void userWritesTheIntoThePasswordBoxInTheAuthorizationWindow(String password) {
-        pageObject.passwordBox.sendKeys(password);
-    }
-
-    @Then("User clicks the login button in the authorization window.")
-    public void userClicksTheLoginButtonInTheAuthorizationWindow() {
-        pageObject.loginButton.click();
-    }
+public class CompanyPageAddingAndRemovingImages_StepDefinitions {
+    CompanyPage pageObject = new CompanyPage();
 
     @And("User should be able to logged into the system.")
     public void userShouldBeAbleToLoggedIntoTheSystem() {

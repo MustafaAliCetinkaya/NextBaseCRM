@@ -17,8 +17,10 @@ dryRun = false --> this will turn off dryRun, and our code will run as expected.
                 "junit:target/junit/junit-report.xml",
                 "rerun:target/rerun.txt",
         },
-        features = "src/test/resources/features/crm",
+        features = "src/test/resources/features",
         glue = "com/nextBaseCRM/stepDefinitions",
+        tags = "@LoginWithValidCredentials",
+        dryRun = false,          //False-->Means directly start the tests / True-->Check for the missing methods, do not run
         publish = true //will enable a functionality from cucumber to generate a public daily link for the report of our final execution of our code
 
 )

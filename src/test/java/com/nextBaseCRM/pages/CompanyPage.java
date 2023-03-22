@@ -7,12 +7,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class AgileProCRMBasePage {
-    public AgileProCRMBasePage() {
+public class CompanyPage {
+    public CompanyPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -22,14 +23,15 @@ public class AgileProCRMBasePage {
     @FindBy(css = "input[type=\"password\"]")
     public WebElement passwordBox;
 
+
+    @FindBy(css = "input.login-btn")
+    public WebElement loginButton;
+
     @FindBy(xpath = "//a[.='Log out']")
     public WebElement logoutButton;
 
     @FindBy(css = "span#user-name")
     public WebElement usernameButton;
-
-    @FindBy(css = "input.login-btn")
-    public WebElement loginButton;
 
     @FindBy(css = "li#bx_left_menu_menu_about_sect a")
     public WebElement companyLink;
@@ -45,7 +47,6 @@ public class AgileProCRMBasePage {
 
     @FindBy(xpath = "//span[.='Save']")
     public WebElement saveButtonOnImageEditor;
-
 
     @FindBy(xpath = "//span[.='Now loading...']")
     public WebElement loadingBar;

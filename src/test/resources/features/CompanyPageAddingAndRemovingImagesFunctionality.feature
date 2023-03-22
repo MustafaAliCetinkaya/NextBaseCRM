@@ -1,11 +1,10 @@
-@TCAddingAndRemovingImages
 Feature: Adding and removing images functionality ( As a user, I should be able to add news under Company.)
 
   //Background: For the scenarios in the adding and removing images functionality, , user is expected to be logged into on the system.
 
   @AddingByUsingImagePath
   Scenario Outline: User should be able to add and remove a picture under details tab
-    Given Open the Application URL in any supported browser in order to login the system
+    Given User opens the Application URL in any supported browser in order to login the system
     When User writes the  "<username>" into the username box in the authorization window.
     When User writes the  "<password>" into the password box in the authorization window.
     Then User clicks the login button in the authorization window.

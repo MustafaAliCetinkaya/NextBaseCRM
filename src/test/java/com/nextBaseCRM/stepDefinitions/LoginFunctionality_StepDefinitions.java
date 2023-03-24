@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.junit.ComparisonFailure;
 
 public class LoginFunctionality_StepDefinitions {
 
@@ -72,6 +73,65 @@ public class LoginFunctionality_StepDefinitions {
 
         String actualErrorMessage = pageObject.warningMessage.getText();
 
-        Assert.assertEquals(expectedErrorMessage,actualErrorMessage);
+        Assert.assertEquals(expectedErrorMessage, actualErrorMessage);
+    }
+
+    @Then("Check whether the page title is written correctly")
+    public void check_whether_the_page_title_is_written_correctly() {
+        String expectedPageTitle = "Authorization";
+        String actualPageTitle = Driver.getDriver().getTitle();
+        Assert.assertEquals(expectedPageTitle, actualPageTitle);
+    }
+
+    @Then("Check whether the login box header is written correctly")
+    public void check_whether_the_login_box_header_is_written_correctly() {
+        String expectedBoxHeader = "Authorization";
+        String actualBoxHeader = pageObject.loginBoxHeader.getText();
+        Assert.assertEquals(expectedBoxHeader, actualBoxHeader);
+    }
+
+    @Then("Check whether the remember me text is written correctly")
+    public void check_whether_the_remember_me_text_is_written_correctly() {
+        String expectedRememberText = "Remember me on this computer";
+        String actualRememberText = pageObject.rememberMeText.getText();
+        Assert.assertEquals(expectedRememberText, actualRememberText);
+    }
+
+    @Then("Check whether the {string} text is written correctly")
+    public void check_whether_the_text_is_written_correctly(String string) {
+        try {
+            String expectedForgotPasswordText = "FORGOT YOUR PASSWORD?";
+            String actualForgotPasswordText = pageObject.forgotPasswordLink.getText();
+            Assert.assertEquals(expectedForgotPasswordText, actualForgotPasswordText);
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    @Then("Check if the link which is label as forgot password link is working properly")
+    public void check_if_the_link_which_is_label_as_forgot_password_link_is_working_properly() {
+        pageObject.forgotPasswordLink.click();
+        String expectedPopupHeaderText = "Get Password";
+        String actualPopupHeaderText = pageObject.popupHeaderText.getText();
+        Assert.assertEquals(expectedPopupHeaderText, actualPopupHeaderText);
+        Driver.getDriver().navigate().back();
+    }
+
+    @Then("Check whether the text on the login button is written correctly")
+    public void check_whether_the_text_on_the_login_button_is_written_correctly() {
+        String expectedLoginButtonText = "Log In";
+        String actualLoginButtonText = pageObject.getLoginButtonText.getAttribute("value");
+        Assert.assertEquals(expectedLoginButtonText, actualLoginButtonText);
+    }
+    @Then("Check whether the placeholder texts in the password and username boxes are written correctly")
+    public void check_whether_the_placeholder_texts_in_the_password_and_username_boxes_are_written_correctly() {
+        String expectedUsernameBoxText = "Username or Email Address";
+        String expectedPasswordBoxText = "Password";
+
+        String actualUsernameBoxText = pageObject.usernameBox.getAttribute("placeholder");
+        String actualPasswordBoxText = pageObject.passwordBox.getAttribute("placeholder");
+
+        Assert.assertEquals(expectedPasswordBoxText, actualPasswordBoxText);
+        Assert.assertEquals(expectedUsernameBoxText, actualUsernameBoxText);
     }
 }

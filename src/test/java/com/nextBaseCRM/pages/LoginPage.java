@@ -36,4 +36,24 @@ public class LoginPage {
     @FindBy(css = "div.errortext")
     public WebElement warningMessage;
 
+
+    @FindBy(css = "div.log-popup-header")
+    public WebElement loginBoxHeader;
+
+
+    @FindBy(css = "a.login-link-forgot-pass")
+    public WebElement forgotPasswordLink;
+
+
+    @FindBy(css = "label.login-item-checkbox-label")
+    public WebElement rememberMeText;
+
+
+    @FindBy(css = "input.login-btn")
+    public WebElement getLoginButtonText;
+
+
+    @FindBy(css = "div.log-popup-header")
+    public WebElement popupHeaderText;
+
 }

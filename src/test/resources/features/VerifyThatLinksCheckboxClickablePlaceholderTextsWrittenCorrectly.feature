@@ -1,5 +1,5 @@
 Feature: Login functionality
-  @AGL-3
+  @AGL-393
   Scenario: As a user, I should not be able see the password in bullet signs by default. User can see the "Remember Me" link exists and is clickable on the login page. "Forgot Password" link exists and is clickable on the login page.
     Given User opens the Application URL in any supported browser in order to login the system
     Then Check whether the page title is written correctly

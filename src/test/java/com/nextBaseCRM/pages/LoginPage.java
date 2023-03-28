@@ -56,4 +56,19 @@ public class LoginPage {
     @FindBy(css = "div.log-popup-header")
     public WebElement popupHeaderText;
 
+    @FindBy(xpath = "//span[.='Message']")
+    public WebElement messageButton;
+
+    @FindBy(xpath = "//iframe[@class=\"bx-editor-iframe\"]")
+    public WebElement iframe;
+
+    @FindBy(css = "button#blog-submit-button-save")
+    public WebElement sendButton;
+
+    @FindBy(xpath = "(//div[@class='feed-post-text-block-inner-inner'])[1]")
+    public WebElement insertedText;
+
+    @FindBy(xpath = "//body")
+    public WebElement writingPanel;
+
 }

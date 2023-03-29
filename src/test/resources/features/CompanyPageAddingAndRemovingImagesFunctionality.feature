@@ -1,6 +1,6 @@
 Feature: Adding and removing images functionality ( As a user, I should be able to add news under Company.)
 
-  //Background: For the scenarios in the adding and removing images functionality, , user is expected to be logged into on the system.
+  //Background: For the scenarios in the adding and removing images functionality, user is expected to be logged into on the system.
 
   @AddingByUsingImagePath
   Scenario Outline: User should be able to add and remove a picture under details tab

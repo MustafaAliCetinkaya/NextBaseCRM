@@ -6,6 +6,7 @@ Feature: Training functions.
   Background:
     Given User goes to url
 
+
   @AGL-397
   Scenario Outline: User can display his or her courses.
 

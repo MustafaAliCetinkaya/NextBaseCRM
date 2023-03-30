@@ -58,5 +58,4 @@ public class ServiceFunctionsPage {
 
     @FindBy (xpath = "//input[@type='submit']")
     public WebElement saveButton;
-
 }

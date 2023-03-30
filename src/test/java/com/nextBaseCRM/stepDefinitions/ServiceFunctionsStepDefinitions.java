@@ -100,6 +100,5 @@ public class ServiceFunctionsStepDefinitions {
         Assert.assertEquals(email, serviceFunctionsPage.inputEMail.getAttribute("value"));
         Assert.assertEquals(webSite, serviceFunctionsPage.inputWebSite.getAttribute("value"));
         Assert.assertEquals(icq, serviceFunctionsPage.inputIcq.getAttribute("value"));
-
     }
 }

@@ -1,6 +1,7 @@
 package com.nextBaseCRM.pages;
 
 import com.nextBaseCRM.utilities.BrowserUtils;
+import com.nextBaseCRM.utilities.ConfigurationReader;
 import com.nextBaseCRM.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -70,5 +71,16 @@ public class LoginPage {
 
     @FindBy(xpath = "//body")
     public WebElement writingPanel;
+
+    // -------------------Methods related to page------------------------------------
+
+    public void login(String username, String password){
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+        usernameBox.sendKeys(username);
+        passwordBox.sendKeys(password);
+        loginButton.click();
+
+    }
 
 }

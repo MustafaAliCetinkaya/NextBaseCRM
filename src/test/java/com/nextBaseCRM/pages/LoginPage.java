@@ -72,6 +72,12 @@ public class LoginPage {
     @FindBy(xpath = "//body")
     public WebElement writingPanel;
 
+    @FindBy(xpath = "//a[@title='Activity Stream']")
+    public WebElement activity_stream_bar;
+
+    @FindBy(xpath = "//div[.='Incorrect login or password']")
+    public WebElement error_message;
+
     // -------------------Methods related to page------------------------------------
 
     public void login(String username, String password){

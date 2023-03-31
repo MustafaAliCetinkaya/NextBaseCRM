@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.NoSuchElementException;
 
-public class Login_StepDefinitions
+public class CRMLoginFunctionality_StepDefinitions
 {
     LoginPage loginPage = new LoginPage();
     Faker faker = new Faker();

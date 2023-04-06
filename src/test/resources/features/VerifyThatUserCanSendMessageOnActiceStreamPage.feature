@@ -3,7 +3,7 @@ Feature: User should be able to create and send a massage.
   Scenario Template: As a user, I should be able to send messages by clicking on message tab on the Active Stream Page.
     Given User already logged into the system with valid  "<username>" and "<password>"
     When User clicks on the message button on the Active Stream Page
-    And User writes any message into the writing panel on the message window
+    Then User writes any message into the writing panel on the message window
     And User clicks the send button in the message window
     Then Check whether the written texts are displayed on the Active Stream Page correctly
     Examples:

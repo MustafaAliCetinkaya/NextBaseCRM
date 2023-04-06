@@ -8,6 +8,6 @@ Feature: Login functionality
     And  Check whether the "FORGOT YOUR PASSWORD?" text is written correctly
     And  Check if the link which is label as forgot password link is working properly
     And  Check whether the text on the login button is written correctly
-    And  Check whether the placeholder texts in the password and username boxes are written correctly
+    Then  Check whether the placeholder texts in the password and username boxes are written correctly
 
 

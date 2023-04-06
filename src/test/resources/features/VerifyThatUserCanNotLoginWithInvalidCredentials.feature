@@ -4,9 +4,9 @@ Feature: Login functionality ( As a user, I should not be able to log in to the 
   Scenario Outline: Any user can not log in with invalid credentials (We have 3 types of users such as Helpdesk, Human Resource, and Marketing).
     Given User opens the Application URL in any supported browser in order to login the system
     When User writes the  "<username>" into the username box in the authorization window.
-    When User writes the  "<password>" into the password box in the authorization window.
-    Then User clicks the login button in the authorization window.
-    And  User should not be able to log in and a warning message should be displayed on the top left corner of the login box.
+    Then User writes the  "<password>" into the password box in the authorization window.
+    And User clicks the login button in the authorization window.
+    Then  User should not be able to log in and a warning message should be displayed on the top left corner of the login box.
     Examples://T-F, F-T, F-F, T-E, E-T, E-E
       | username                       | password   |
       | hr1@cybertekschool.com         | UserUser1  |

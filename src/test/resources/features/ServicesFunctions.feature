@@ -14,7 +14,7 @@ Feature: Training functions.
     And User clicks to Login Button and goes to Home page
     And User goes to Services page
     And User clicks to Training tab
-    When User clicks to My Courses tab
+    And User clicks to My Courses tab
     Then User can display the courses
 
     Examples:

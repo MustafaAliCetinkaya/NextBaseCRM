@@ -4,7 +4,7 @@ Feature: Login functionality ( As a user, I should be able to log in to the syst
   Scenario Outline: All users can log in with valid credentials (We have 3 types of users such as Helpdesk, Human Resource, and Marketing). All users should land on the "Activity Stream" page after successful login.
     Given User opens the Application URL in any supported browser in order to login the system
     When User writes the  "<username>" into the username box in the authorization window.
-    Then User writes the  "<password>" into the password box in the authorization window.
+    And User writes the  "<password>" into the password box in the authorization window.
     And User clicks the login button in the authorization window.
     Then User should be able to see "<his/her own username details>" on the dropdown which is at the right top corner of the Activity Stream page.
     Examples:
